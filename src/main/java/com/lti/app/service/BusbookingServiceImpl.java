@@ -57,5 +57,11 @@ public class BusbookingServiceImpl implements BusbookingService
 	{
 		return bdao.getBusseats();
 	}
+	@Override
+	public boolean updateBusseats(String bid, String sstatus,String sno) {
+		
+		return bdao.updateBusseats(bid, sstatus,sno);
+	}
+
 	
 }

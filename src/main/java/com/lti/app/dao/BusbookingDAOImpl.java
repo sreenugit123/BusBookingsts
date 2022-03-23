@@ -2,6 +2,7 @@ package com.lti.app.dao;
 
 import javax.persistence.EntityManager;
 
+
 import javax.persistence.Query;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -62,6 +63,19 @@ public class BusbookingDAOImpl implements BusbookingDAO
         qry2.setParameter(1,busid);
 		List<Busseats> res=qry2.getResultList();
 		return res;
+	}
+	@Override
+	public boolean updateBusseats(String bid,String sstatus,String sno) {
+		  Query qry2= eMan.createQuery("update Busseats  b set   b.sstatus=?1 where  b.bid = ?2 and b.sno=?3");
+	        qry2.setParameter(1,sstatus);
+	        qry2.setParameter(2,bid);
+	        qry2.setParameter(3,sno);
+			int count=qry2.executeUpdate();
+			if(count>0)
+				return true;
+		    else
+				return false;
+
 	}
 	
 	

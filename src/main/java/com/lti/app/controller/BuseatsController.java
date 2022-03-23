@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -39,6 +40,11 @@ public class BuseatsController
 	public List<Busseats> findBusseats(@PathVariable(name="bid") String busid)
 	{
 			return bService.findBusseats(busid);
+	}
+	@GetMapping("/updatebusseats/{bid}/{sstatus}/{sno}") 
+	public boolean updatebusseats(@PathVariable("bid") String bid,@PathVariable("sstatus") String sstatus,@PathVariable("sno") String sno)
+	{
+			return bService.updateBusseats(bid, sstatus,sno);
 	}
 
 }

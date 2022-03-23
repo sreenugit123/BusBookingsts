@@ -50,10 +50,5 @@ public class BusbookingController
 	{
 			return bService.searchBusdetails(fcity,tcity,date);
 	}
-	/*@GetMapping("/vehicle/{vehicleid}")
-	public Vehicle findVehicle(@PathVariable("vehicleid") String vehicleId)
-	{
-			return vService.findVehicle(vehicleId);
-	} */
-
+	
 }

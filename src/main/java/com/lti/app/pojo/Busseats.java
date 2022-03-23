@@ -16,18 +16,21 @@ public class Busseats
 	private String sno;
 	@Column(name="busid")
 	private String bid;
+	@Column(name="seatstatus")
+	private String sstatus;
 	public Busseats() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Busseats(String sno, String bid) {
+	public Busseats(String sno, String bid, String sstatus) {
 		super();
 		this.sno = sno;
 		this.bid = bid;
+		this.sstatus = sstatus;
 	}
 	@Override
 	public String toString() {
-		return "busseats [sno=" + sno + ", bid=" + bid + "]";
+		return "Busseats [sno=" + sno + ", bid=" + bid + ", sstatus=" + sstatus + "]";
 	}
 	public String getSno() {
 		return sno;
@@ -41,7 +44,17 @@ public class Busseats
 	public void setBid(String bid) {
 		this.bid = bid;
 	}
+	public String getSstatus() {
+		return sstatus;
+	}
+	public void setSstatus(String sstatus) {
+		this.sstatus = sstatus;
+	}
+	
+	
+	
+	}
 	
 	
 
-}
+

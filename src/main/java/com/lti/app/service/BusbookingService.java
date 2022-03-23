@@ -16,4 +16,5 @@ public interface BusbookingService
 	public List<Busseats> findBusseats(String busid);
 	public boolean addBusseats(Busseats busseats);
 	public List<Busseats> getBusseats();
+	public boolean updateBusseats(String bid,String sstatus,String sno);
 }

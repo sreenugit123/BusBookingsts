@@ -17,4 +17,5 @@ public interface BusbookingDAO
 	public List<Busseats> getBusseats();
 	public List<Busseats> findBusseats(String busid);
 	public List<Busdetails> searchBusdetails(String fcity,String tcity,String date);
+	public boolean updateBusseats(String bid,String sstatus,String sno);
 }
